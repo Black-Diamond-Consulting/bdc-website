@@ -1,6 +1,13 @@
 import { useState } from "react";
 import logo from '../assets/logo.png';
 
+const texts = {
+  li1: 'Who we are',
+  li2: 'What we do',
+  li3: 'Why choose us',
+  li4: 'Join us'
+}
+
 export const Navbar = () => {
 
   const [showMenu, setShowMenu] = useState(false);
@@ -13,7 +20,7 @@ export const Navbar = () => {
     <nav className="bg-black text-white p-4">
         <div className="grid grid-cols-3 items-center">
           <div>
-            <img src={logo} alt="Logo" className="h-12" />
+            <img src={logo} alt="Logo" className="h-16" />
           </div>
 
           <div className="col-span-2 flex justify-end md:hidden">
@@ -32,11 +39,11 @@ export const Navbar = () => {
             </button>
           </div>
 
-          <ul className={`md:flex md:space-x-6 md:justify-center ${showMenu ? 'block' : 'hidden'}`}>
-            <li><a href="#" className="hover:underline">Who we are</a></li>
-            <li><a href="#" className="hover:underline">What we do</a></li>
-            <li><a href="#" className="hover:underline">Why choose us</a></li>
-            <li><a href="#" className="hover:underline">Join us</a></li>
+          <ul className={`md:flex md:space-x-6 md:justify-around ${showMenu ? 'block' : 'hidden'}`}>
+            <li><a href="#" className="hover:underline">{texts.li1}</a></li>
+            <li><a href="#" className="hover:underline">{texts.li2}</a></li>
+            <li><a href="#" className="hover:underline">{texts.li3}</a></li>
+            <li><a href="#" className="hover:underline">{texts.li4}</a></li>
           </ul>
         </div>
       </nav>
