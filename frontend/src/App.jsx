@@ -4,6 +4,7 @@ import { Carousel } from "./components/Carousel"
 import { Support } from "./components/Support"
 import { EvolvingTrends } from "./components/EvolvingTrends"
 import { Footer } from "./components/Footer"
+import { FooterLinks } from "./components/FooterLinks"
 // import { Testimonials } from "./components/Testimonials"
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Support />
       {/* <Testimonials /> */}
       <Footer />
+      <FooterLinks />
     </>
   )
 }
